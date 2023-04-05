@@ -1,0 +1,144 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Riverbed_API_Access_Examples",
+    "dateExported": "2023-04-05T19:59:53.378Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cf0292f3-4b99-40bc-bafd-5861342b5d70",
+            "colId": "4a691fc7-b795-410c-9a9e-1ff87eb14fb4",
+            "containerId": "",
+            "name": "AR11_API_POST_AR11_get_access_token",
+            "url": "https://10.10.10.10/api/mgmt.aaa/1.0/token",
+            "method": "POST",
+            "sortNum": 3750,
+            "created": "2023-04-05T19:52:42.089Z",
+            "modified": "2023-04-05T19:58:24.046Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"user_credentials\": \n    {\"username\": \"username\",\n    \"password\": \"password\"\n    }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0006f50d-c1f4-4745-986c-bebf5c4056c3",
+            "colId": "4a691fc7-b795-410c-9a9e-1ff87eb14fb4",
+            "containerId": "",
+            "name": "AR11_API_GET_urls",
+            "url": "https://10.10.10.10/api/npm.classification/3.2/urls",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2023-04-05T19:36:03.282Z",
+            "modified": "2023-04-05T19:58:30.167Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "Bearer Token here"
+            },
+            "tests": []
+        },
+        {
+            "_id": "de48e067-8596-4dac-bece-6871857d24be",
+            "colId": "4a691fc7-b795-410c-9a9e-1ff87eb14fb4",
+            "containerId": "",
+            "name": "NetProfiler_API_get_access_token",
+            "url": "https://10.10.10.10/api/common/1.1/oauth/token?grant_type=access_code&assertion=access code here",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-05T19:26:48.895Z",
+            "modified": "2023-04-05T19:59:29.700Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [
+                {
+                    "name": "grant_type",
+                    "value": "access_code",
+                    "isPath": false
+                },
+                {
+                    "name": "assertion",
+                    "value": "access code here",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "6f59e7ad-0e59-4ad8-a0f5-246779f1002f",
+            "colId": "4a691fc7-b795-410c-9a9e-1ff87eb14fb4",
+            "containerId": "",
+            "name": "NetProfiler_Traffic_report_by_device",
+            "url": "https://10.10.10.10/api/profiler/1.1/reporting/reports/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-05T19:30:09.007Z",
+            "modified": "2023-04-05T19:59:35.733Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"criteria\": {\n        \"time_frame\": {\n            \"start\": 1678153524,\n            \"end\": 1678154424\n        },\n        \"traffic_expression\": \"\",\n        \"query\": {\n            \"realm\": \"traffic_flow_list\",\n            \"group_by\": \"dev\",\n            \"columns\": [\n                125,\n                33,\n                34,\n                532\n            ]\n        }\n    },\n    \"template_id\": 184\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "access_token here"
+            },
+            "tests": []
+        },
+        {
+            "_id": "07907b05-b197-4d3d-a684-58eff2939431",
+            "colId": "4a691fc7-b795-410c-9a9e-1ff87eb14fb4",
+            "containerId": "",
+            "name": "NetIM_API_GET_NetIM_device_access_infos",
+            "url": "https://10.10.10.10:8543/api/netim/v1/device-access-infos",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-04-05T19:41:45.222Z",
+            "modified": "2023-04-05T19:59:47.810Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "username",
+                    "password": "username"
+                }
+            },
+            "tests": []
+        }
+    ]
+}
